@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="An open cotton boll on the branch, showing the fibre held in dried bracts">
+  <defs>
+    <!-- one dried bract point, tip at the origin, opening downward -->
+    <path id="bract" d="M0 0 L-19 62 L0 50 L19 62 Z" fill="#b08a4e"/>
+    <!-- one lobe of fibre -->
+    <g id="lobe">
+      <circle cx="0" cy="0" r="34" fill="#fbfaf5" stroke="#e6e1d2" stroke-width="2"/>
+      <circle cx="-13" cy="-9" r="20" fill="#ffffff" opacity=".75"/>
+    </g>
+  </defs>
+
+  <!-- branch and leaves -->
+  <path d="M30 330 C110 322 156 300 190 262" fill="none" stroke="#16513a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M96 320 C112 296 112 278 98 258" fill="none" stroke="#16513a" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="82" cy="248" rx="27" ry="16" fill="#2f8a61" transform="rotate(-30 82 248)"/>
+  <ellipse cx="146" cy="300" rx="25" ry="15" fill="#3d9b70" transform="rotate(10 146 300)"/>
+  <path d="M82 248 l-20 12 M146 300 l-18 8" stroke="#16513a" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- stem into the boll -->
+  <path d="M190 262 C214 250 232 236 244 216" fill="none" stroke="#16513a" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- dried bracts, radiating from the centre and sitting behind the fibre -->
+  <g transform="translate(258 176)">
+    <use href="#bract" transform="rotate(0) translate(0 -122)"/>
+    <use href="#bract" transform="rotate(72) translate(0 -122)"/>
+    <use href="#bract" transform="rotate(144) translate(0 -122)"/>
+    <use href="#bract" transform="rotate(216) translate(0 -122)"/>
+    <use href="#bract" transform="rotate(288) translate(0 -122)"/>
+  </g>
+
+  <!-- the lint: five lobes around a centre -->
+  <g transform="translate(258 176)">
+    <use href="#lobe" transform="translate(0 -46)"/>
+    <use href="#lobe" transform="translate(44 -14)"/>
+    <use href="#lobe" transform="translate(27 38)"/>
+    <use href="#lobe" transform="translate(-27 38)"/>
+    <use href="#lobe" transform="translate(-44 -14)"/>
+    <circle cx="0" cy="0" r="30" fill="#fbfaf5"/>
+    <circle cx="-8" cy="-8" r="16" fill="#ffffff" opacity=".8"/>
+  </g>
+
+  <!-- a few fibres catching the light at the edge -->
+  <g stroke="#e6e1d2" stroke-width="2" stroke-linecap="round" fill="none">
+    <path d="M336 118 c14 -9 25 -6 31 5"/>
+    <path d="M180 116 c-13 -9 -24 -6 -30 5"/>
+    <path d="M340 236 c15 7 22 17 21 29"/>
+  </g>
+</svg>

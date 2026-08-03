@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="A grove of cotton trees carrying open bolls">
+  <defs>
+    <!-- every part below is drawn with the base of the trunk at the local origin,
+         growing upward into negative y, so a tree can be dropped onto the ground line -->
+    <g id="tree">
+      <path d="M0 0 L0 -112" stroke="#16513a" stroke-width="8" stroke-linecap="round"/>
+      <path d="M0 -58 L-34 -88 M0 -74 L32 -102 M0 -92 L-26 -118 M0 -104 L22 -126"
+            stroke="#16513a" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+      <g fill="#2f8a61">
+        <ellipse cx="-40" cy="-92" rx="24" ry="15" transform="rotate(-20 -40 -92)"/>
+        <ellipse cx="4" cy="-138" rx="26" ry="16"/>
+        <ellipse cx="30" cy="-72" rx="21" ry="13" transform="rotate(16 30 -72)"/>
+        <ellipse cx="-16" cy="-46" rx="19" ry="12" transform="rotate(-14 -16 -46)"/>
+      </g>
+      <g fill="#3d9b70">
+        <ellipse cx="38" cy="-108" rx="24" ry="15" transform="rotate(18 38 -108)"/>
+        <ellipse cx="-30" cy="-124" rx="21" ry="13" transform="rotate(-16 -30 -124)"/>
+        <ellipse cx="18" cy="-40" rx="17" ry="11" transform="rotate(14 18 -40)"/>
+        <ellipse cx="-8" cy="-104" rx="20" ry="13"/>
+      </g>
+    </g>
+
+    <g id="boll">
+      <circle cx="0" cy="-3" r="7"/>
+      <circle cx="-5.5" cy="1" r="5.5"/>
+      <circle cx="5.5" cy="1" r="5.5"/>
+      <circle cx="0" cy="4" r="5"/>
+    </g>
+  </defs>
+
+  <!-- sun -->
+  <circle cx="404" cy="70" r="30" fill="#e6f0e6"/>
+  <circle cx="404" cy="70" r="17" fill="#d5e7db"/>
+
+  <!-- ground -->
+  <path d="M0 288 Q120 276 240 284 T480 280 L480 360 L0 360 Z" fill="#e3eee5"/>
+  <path d="M0 288 Q120 276 240 284 T480 280" fill="none" stroke="#c3ddcc" stroke-width="2"/>
+
+  <!-- back row: smaller, paler, sitting a little higher on the slope -->
+  <g opacity=".4">
+    <g transform="translate(66 284) scale(.64)"><use href="#tree"/></g>
+    <g transform="translate(414 280) scale(.58)"><use href="#tree"/></g>
+    <g transform="translate(238 282) scale(.5)"><use href="#tree"/></g>
+  </g>
+
+  <!-- front row -->
+  <g transform="translate(158 292)">
+    <use href="#tree"/>
+    <g fill="#fbfaf5">
+      <use href="#boll" x="-46" y="-96"/>
+      <use href="#boll" x="34" y="-72"/>
+      <use href="#boll" x="-24" y="-128"/>
+      <use href="#boll" x="42" y="-112"/>
+      <use href="#boll" x="2" y="-150"/>
+      <use href="#boll" x="-14" y="-44"/>
+    </g>
+  </g>
+
+  <g transform="translate(316 296) scale(.92)">
+    <use href="#tree"/>
+    <g fill="#fbfaf5">
+      <use href="#boll" x="40" y="-70"/>
+      <use href="#boll" x="-38" y="-96"/>
+      <use href="#boll" x="26" y="-116"/>
+      <use href="#boll" x="-20" y="-134"/>
+      <use href="#boll" x="6" y="-152"/>
+    </g>
+  </g>
+
+  <!-- fallen tufts and grass -->
+  <g fill="#fbfaf5">
+    <circle cx="96" cy="318" r="5"/>
+    <circle cx="106" cy="322" r="3.5"/>
+    <circle cx="392" cy="326" r="4.5"/>
+  </g>
+  <g stroke="#a9cdb6" stroke-width="2.4" stroke-linecap="round">
+    <path d="M44 314 l0 -12M60 320 l0 -10M268 322 l0 -12M438 316 l0 -11M196 332 l0 -12"/>
+  </g>
+</svg>

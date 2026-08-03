@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img" aria-label="The ginning shed, with roller gins inside and pressed bales stacked outside">
+  <!-- ground -->
+  <path d="M0 300 L480 300 L480 360 L0 360 Z" fill="#e3eee5"/>
+  <line x1="0" y1="300" x2="480" y2="300" stroke="#c3ddcc" stroke-width="2"/>
+
+  <!-- shed body -->
+  <rect x="72" y="146" width="284" height="154" fill="#f4f9f4" stroke="#2f8a61" stroke-width="2.5"/>
+  <!-- saw-tooth roof, the classic mill profile -->
+  <path d="M72 146 L118 108 L118 146 M118 146 L164 108 L164 146 M164 146 L210 108 L210 146
+           M210 146 L256 108 L256 146 M256 146 L302 108 L302 146 M302 146 L348 108 L348 146"
+        fill="#d8e9de" stroke="#2f8a61" stroke-width="2.5" stroke-linejoin="round"/>
+  <line x1="66" y1="146" x2="362" y2="146" stroke="#16513a" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- roller gin stands seen through the opening -->
+  <rect x="98" y="190" width="150" height="84" rx="4" fill="#ffffff" stroke="#a9cdb6" stroke-width="2"/>
+  <g stroke="#2f8a61" stroke-width="2.5" fill="none">
+    <circle cx="128" cy="222" r="15"/>
+    <circle cx="173" cy="222" r="15"/>
+    <circle cx="218" cy="222" r="15"/>
+    <line x1="128" y1="222" x2="128" y2="207"/>
+    <line x1="173" y1="222" x2="173" y2="207"/>
+    <line x1="218" y1="222" x2="218" y2="207"/>
+    <line x1="106" y1="252" x2="240" y2="252"/>
+  </g>
+  <g fill="#2f8a61">
+    <circle cx="128" cy="222" r="3.5"/>
+    <circle cx="173" cy="222" r="3.5"/>
+    <circle cx="218" cy="222" r="3.5"/>
+  </g>
+  <!-- lint drifting off the rollers -->
+  <g fill="#fbfaf5" stroke="#d8e9de" stroke-width="1.2">
+    <circle cx="146" cy="204" r="5"/>
+    <circle cx="196" cy="200" r="4"/>
+    <circle cx="238" cy="208" r="4.5"/>
+  </g>
+
+  <!-- doorway -->
+  <rect x="278" y="212" width="58" height="88" fill="#e3eee5" stroke="#2f8a61" stroke-width="2.5"/>
+  <line x1="307" y1="212" x2="307" y2="300" stroke="#a9cdb6" stroke-width="2"/>
+
+  <!-- pressed bales stacked outside -->
+  <g stroke="#8a6b32" stroke-width="2" fill="#f7f1e2">
+    <rect x="374" y="242" width="82" height="30" rx="3"/>
+    <rect x="374" y="272" width="82" height="30" rx="3"/>
+    <rect x="386" y="212" width="70" height="30" rx="3"/>
+  </g>
+  <g stroke="#c69a4c" stroke-width="1.6">
+    <line x1="396" y1="242" x2="396" y2="272"/><line x1="434" y1="242" x2="434" y2="272"/>
+    <line x1="396" y1="272" x2="396" y2="302"/><line x1="434" y1="272" x2="434" y2="302"/>
+    <line x1="406" y1="212" x2="406" y2="242"/><line x1="438" y1="212" x2="438" y2="242"/>
+  </g>
+
+  <!-- yard drying line -->
+  <g stroke="#a9cdb6" stroke-width="2.2" stroke-linecap="round">
+    <path d="M22 300 l0 -30 M40 300 l0 -22"/>
+  </g>
+  <ellipse cx="31" cy="264" rx="20" ry="10" fill="#eef5ef" stroke="#c3ddcc" stroke-width="1.6"/>
+</svg>
