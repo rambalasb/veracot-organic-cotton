@@ -1,4 +1,4 @@
-/* VERACOT — nav, theme, reveal-on-scroll. No dependencies. */
+/* GENCOTT — nav, theme, reveal-on-scroll. No dependencies. */
 (function () {
   "use strict";
 
@@ -19,7 +19,7 @@
   }
 
   /* ---- Theme toggle (persisted) ---- */
-  var STORE = "veracot-theme";
+  var STORE = "gencott-theme";
   var root = document.documentElement;
 
   /* Light cotton is the default regardless of the OS setting — dark is opt-in. */

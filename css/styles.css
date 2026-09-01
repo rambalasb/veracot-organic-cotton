@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VERACOT Organic Cotton Standard — design system
+   GENCOTT Organic Cotton Standard — design system
    ========================================================================== */
 
 :root {
@@ -27,8 +27,9 @@
   --on-cotton-faint: #6c7c74;
 
   /* Type */
-  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
+  --font-serif: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
+  --font-mono: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
 
   /* Space */
   --wrap: 1160px;
@@ -147,18 +148,11 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 }
 .header-inner { display: flex; align-items: center; gap: 1.5rem; height: 72px; }
 
-.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; color: var(--ink); }
-.logo:hover { text-decoration: none; }
-.logo-mark {
-  width: 38px; height: 38px; flex: 0 0 38px;
-  border-radius: 50%;
-  background: var(--green);
-  display: grid; place-items: center;
+.logo {
+  display: inline-block; text-decoration: none; color: var(--ink);
+  font-weight: 700; letter-spacing: .16em; font-size: 1.5rem; line-height: 1;
 }
-.logo-mark svg { width: 22px; height: 22px; fill: #fff; }
-.logo-text { display: flex; flex-direction: column; line-height: 1.05; }
-.logo-name { font-weight: 700; letter-spacing: .1em; font-size: 1rem; }
-.logo-sub { font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); }
+.logo:hover { text-decoration: none; }
 
 .nav { margin-left: auto; display: flex; align-items: center; gap: 1.6rem; }
 .nav a {
@@ -404,7 +398,7 @@ td strong { font-weight: 600; }
 .label-mock .ring svg { width: 40px; height: 40px; fill: #fff; }
 .label-mock .lm-name { font-weight: 700; letter-spacing: .14em; font-size: 1rem; }
 .label-mock .lm-sub { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); margin-top: .2rem; }
-.label-mock .lm-id { font-size: .6rem; color: var(--ink-faint); margin-top: .8rem; font-family: ui-monospace, Menlo, monospace; }
+.label-mock .lm-id { font-size: .6rem; color: var(--ink-faint); margin-top: .8rem; font-family: var(--font-mono); }
 
 /* ---------- FAQ ---------- */
 details.faq {
