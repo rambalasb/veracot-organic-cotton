@@ -1,8 +1,8 @@
-# VERACOT — Organic Tree Cotton — website
+# GENCOTT — Organic Tree Cotton — website
 
 A static, dependency-free website for a **grower and ginner of organic tree cotton** — *Gossypium
 arboreum*, the perennial woody cotton of the Indian subcontinent, grown as standing groves rather than
-as an annual row crop. VERACOT contracts the crop, gins it on its own roller line, and sells
+as an annual row crop. GENCOTT contracts the crop, gins it on its own roller line, and sells
 **roller-ginned lint in 170 kg bales**. That is the entire product range: three grades of one fibre.
 
 The site names **no location at all** below country level — no town, district, plot, port, airport or
@@ -15,7 +15,7 @@ cut-and-sew floor — no yarn, no fabric, no finished goods, and no packing unde
 change the business model, `products.html` (the "Cotton is all we sell" callout), the home page intro
 and the Buyer FAQ all need to change together.
 
-`VERACOT` is a fictional company invented for this site. The addresses, phone numbers, acreage,
+`GENCOTT` is a fictional company invented for this site. The addresses, phone numbers, acreage,
 capacities, certifications and email addresses are illustrative placeholders (`*.example` domains,
 `000 0000` numbers) — replace them before any real use.
 
@@ -82,9 +82,9 @@ Opening `index.html` directly from the filesystem also works.
 
 1. **The form has no backend.** `js/site.js` intercepts submit and shows a notice. Point it at your own
    endpoint, a form service, or swap it for a `mailto:` action.
-2. **Replace every placeholder contact detail.** `sales@veracot.example`, `export@veracot.example`,
-   `studio@veracot.example`, `compliance@veracot.example`, `groves@veracot.example`,
-   `accounts@veracot.example`, `visits@veracot.example` and the `+91 712 000 000x` numbers are all
+2. **Replace every placeholder contact detail.** `sales@gencott.example`, `export@gencott.example`,
+   `studio@gencott.example`, `compliance@gencott.example`, `groves@gencott.example`,
+   `accounts@gencott.example`, `visits@gencott.example` and the `+91 712 000 000x` numbers are all
    invented. The site gives no address by design — add one to `contact.html` only if you want it public.
 3. **Replace the commercial figures.** Acreage, family and headcount numbers, ginning capacity, outturn,
    bale counts, MOQs, lead times, and every staple/micronaire/trash figure including the three grade
