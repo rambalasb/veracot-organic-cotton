@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GENCOTT Organic Cotton Standard — design system
+   GENCOTT Organic Cotton Standard - design system
    ========================================================================== */
 
 :root {
@@ -17,7 +17,7 @@
   --accent: #b98b3c;
   --accent-light: #f8f1e2;
 
-  /* Cotton — the pale green-white used for the hero and closing bands */
+  /* Cotton - the pale green-white used for the hero and closing bands */
   --cotton: #f5faf5;
   --cotton-deep: #e7f1e9;
   --cotton-line: #dbe8dd;
@@ -29,58 +29,11 @@
   /* Type */
   --font-sans: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
   --font-serif: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
-  --font-mono: "Cormorant Garamond", Garamond, Georgia, "Times New Roman", serif;
 
   /* Space */
   --wrap: 1160px;
   --pad: clamp(1.25rem, 4vw, 2.5rem);
   --radius: 14px;
-  --shadow: 0 1px 2px rgba(20, 32, 27, .05), 0 12px 32px -12px rgba(20, 32, 27, .16);
-}
-
-/* The light cotton palette is the default for everyone, including visitors whose
-   OS is set to dark. Dark is opt-in through the header toggle. */
-:root[data-theme="dark"] {
-  --ink: #e9efe9;
-  --ink-soft: #b6c4bb;
-  --ink-faint: #8b9c92;
-  --line: #26332c;
-  --bg: #0d1411;
-  --bg-alt: #121b16;
-  --green: #4caf83;
-  --green-dark: #2f8a61;
-  --green-light: #16281f;
-  --accent: #d8ab5f;
-  --accent-light: #221c11;
-  --cotton: #111c16;
-  --cotton-deep: #0b1310;
-  --cotton-line: #22302a;
-  --cotton-puff: rgba(255, 255, 255, .04);
-  --on-cotton: #eaf3ee;
-  --on-cotton-soft: #b6c4bb;
-  --on-cotton-faint: #8b9c92;
-  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 14px 34px -14px rgba(0, 0, 0, .7);
-}
-
-:root[data-theme="light"] {
-  --ink: #14201b;
-  --ink-soft: #3f4f47;
-  --ink-faint: #6c7c74;
-  --line: #e2e6e1;
-  --bg: #ffffff;
-  --bg-alt: #f6f8f4;
-  --green: #1f6f4a;
-  --green-dark: #145136;
-  --green-light: #e8f3ec;
-  --accent: #b98b3c;
-  --accent-light: #f8f1e2;
-  --cotton: #f5faf5;
-  --cotton-deep: #e7f1e9;
-  --cotton-line: #dbe8dd;
-  --cotton-puff: rgba(255, 255, 255, .85);
-  --on-cotton: #0e3b28;
-  --on-cotton-soft: #3f4f47;
-  --on-cotton-faint: #6c7c74;
   --shadow: 0 1px 2px rgba(20, 32, 27, .05), 0 12px 32px -12px rgba(20, 32, 27, .16);
 }
 
@@ -93,8 +46,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
-  font-size: 17px;
-  line-height: 1.65;
+  font-size: 20px;
+  line-height: 1.62;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -106,7 +59,7 @@ a:hover { text-decoration: underline; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: -.01em;
   margin: 0 0 .6em;
@@ -114,8 +67,8 @@ h1, h2, h3, h4 {
 
 h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); }
 h2 { font-size: clamp(1.65rem, 3.4vw, 2.4rem); }
-h3 { font-size: 1.22rem; font-family: var(--font-sans); font-weight: 600; letter-spacing: 0; }
-h4 { font-size: 1rem; font-family: var(--font-sans); font-weight: 600; letter-spacing: 0; }
+h3 { font-size: 1.35rem; font-family: var(--font-sans); font-weight: 600; letter-spacing: 0; }
+h4 { font-size: 1.12rem; font-family: var(--font-sans); font-weight: 600; letter-spacing: 0; }
 p { margin: 0 0 1.1em; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--pad); }
@@ -148,11 +101,15 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 }
 .header-inner { display: flex; align-items: center; gap: 1.5rem; height: 72px; }
 
-.logo {
-  display: inline-block; text-decoration: none; color: var(--ink);
-  font-weight: 700; letter-spacing: .16em; font-size: 1.5rem; line-height: 1;
-}
+.logo { display: inline-block; text-decoration: none; line-height: 0; }
 .logo:hover { text-decoration: none; }
+.logo img { display: block; height: 34px; width: auto; }
+/* The wordmark is a JPEG on a white ground. The header is white, so it sits
+   there invisibly; the footer is tinted, so multiply drops the white out.
+   Deliberately NOT applied in the header, which is translucent and sticky -
+   there it would blend with whatever dark photo scrolled underneath. */
+.site-footer .logo img { height: 40px; mix-blend-mode: multiply; }
+@media (max-width: 560px) { .logo img { height: 27px; } }
 
 .nav { margin-left: auto; display: flex; align-items: center; gap: 1.6rem; }
 .nav a {
@@ -163,7 +120,7 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 .nav a:hover { color: var(--ink); text-decoration: none; }
 .nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--green); }
 
-/* `.nav a` outranks `.btn` on specificity — restore the button's own box and colour */
+/* `.nav a` outranks `.btn` on specificity - restore the button's own box and colour */
 .nav a.btn { padding: .72rem 1.35rem; border-bottom: 1px solid transparent; }
 .nav a.btn-primary, .nav a.btn-primary:hover { color: #fff; }
 
@@ -182,19 +139,11 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 .btn-primary:hover { background: var(--green-dark); color: #fff; }
 .btn-ghost { border-color: var(--line); color: var(--ink); background: transparent; }
 .btn-ghost:hover { border-color: var(--green); color: var(--green); }
-/* Used inside .hero / .band — now pale, so these read as solid + outlined green */
+/* Used inside .hero / .band - now pale, so these read as solid + outlined green */
 .btn-light { background: var(--green); color: #fff; }
 .btn-light:hover { background: var(--green-dark); color: #fff; }
 .btn-outline-light { border-color: var(--cotton-line); color: var(--on-cotton); background: transparent; }
 .btn-outline-light:hover { border-color: var(--green); color: var(--green); }
-
-.theme-toggle {
-  width: 38px; height: 38px; border-radius: 50%;
-  border: 1px solid var(--line); background: transparent; color: var(--ink-soft);
-  display: grid; place-items: center; cursor: pointer; flex: 0 0 38px;
-}
-.theme-toggle:hover { color: var(--green); border-color: var(--green); }
-.theme-toggle svg { width: 17px; height: 17px; fill: currentColor; }
 
 .nav-toggle { display: none; }
 
@@ -214,7 +163,6 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
     border-radius: 10px; cursor: pointer; color: var(--ink);
   }
   .nav-toggle svg { width: 20px; height: 20px; fill: currentColor; }
-  .header-inner .theme-toggle { margin-left: .5rem; }
 }
 
 /* ---------- Hero ---------- */
@@ -239,7 +187,7 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 }
 .hero .wrap { position: relative; z-index: 2; }
 .hero-inner { display: grid; gap: clamp(2rem, 5vw, 3.5rem); align-items: center; }
-@media (min-width: 980px) { .hero-inner { grid-template-columns: 1.05fr .95fr; } }
+@media (min-width: 980px) { .hero-inner { grid-template-columns: 1fr 1.15fr; } }
 .hero-art { display: none; }
 @media (min-width: 980px) { .hero-art { display: block; } }
 .hero-art img { display: block; width: 100%; height: auto; }
@@ -323,7 +271,7 @@ ul.checks li::before {
   width: 11px; height: 6px; border-left: 2px solid var(--green);
   border-bottom: 2px solid var(--green); transform: rotate(-45deg);
 }
-ul.checks strong { color: var(--ink); font-weight: 600; }
+ul.checks strong { color: var(--ink); font-weight: 500; }
 
 ul.plain { padding-left: 1.15rem; color: var(--ink-soft); }
 ul.plain li { margin-bottom: .4rem; }
@@ -358,7 +306,7 @@ table { border-collapse: collapse; width: 100%; min-width: 620px; font-size: .95
 th, td { text-align: left; padding: .95rem 1.15rem; border-bottom: 1px solid var(--line); }
 thead th { background: var(--bg-alt); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint); font-weight: 700; }
 tbody tr:last-child td { border-bottom: 0; }
-td strong { font-weight: 600; }
+td strong { font-weight: 500; }
 
 /* ---------- Callout / band ---------- */
 .callout {
@@ -384,37 +332,6 @@ td strong { font-weight: 600; }
 .band .wrap { text-align: center; }
 .band .lede { color: var(--on-cotton-soft); max-width: 60ch; margin: 0 auto 2rem; }
 .band-actions { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
-
-/* ---------- Label mock ---------- */
-.label-mock {
-  width: 200px; padding: 1.4rem 1rem 1.1rem; text-align: center;
-  border: 2px solid var(--green); border-radius: 18px;
-  background: var(--bg); box-shadow: var(--shadow);
-}
-.label-mock .ring {
-  width: 74px; height: 74px; margin: 0 auto .7rem; border-radius: 50%;
-  background: var(--green); display: grid; place-items: center;
-}
-.label-mock .ring svg { width: 40px; height: 40px; fill: #fff; }
-.label-mock .lm-name { font-weight: 700; letter-spacing: .14em; font-size: 1rem; }
-.label-mock .lm-sub { font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); margin-top: .2rem; }
-.label-mock .lm-id { font-size: .6rem; color: var(--ink-faint); margin-top: .8rem; font-family: var(--font-mono); }
-
-/* ---------- FAQ ---------- */
-details.faq {
-  border-bottom: 1px solid var(--line);
-  padding: 1.1rem 0;
-}
-details.faq summary {
-  cursor: pointer; font-weight: 600; list-style: none;
-  display: flex; justify-content: space-between; gap: 1rem; align-items: baseline;
-}
-details.faq summary::-webkit-details-marker { display: none; }
-details.faq summary::after {
-  content: "+"; color: var(--green); font-size: 1.3rem; line-height: 1; flex: 0 0 auto;
-}
-details.faq[open] summary::after { content: "–"; }
-details.faq p { margin: .9rem 0 0; color: var(--ink-soft); }
 
 /* ---------- Form ---------- */
 form.apply { display: grid; gap: 1.1rem; }
@@ -465,3 +382,87 @@ form.apply { display: grid; gap: 1.1rem; }
   padding: .6rem 1rem; z-index: 100;
 }
 .skip-link:focus { left: .5rem; top: .5rem; }
+
+/* ---------- Photography ----------
+   Source photographs live in img/photos/. Every photo carries an explicit
+   width/height so the layout does not shift while it loads. */
+
+/* A framed photograph used inside a content column. */
+.photo {
+  display: block; width: 100%; height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  background: var(--cotton);
+}
+.photo-tall { aspect-ratio: 4 / 5; object-fit: cover; }
+.hero-art .photo-tall { min-height: 30rem; }
+.photo-wide { aspect-ratio: 4 / 3; object-fit: cover; }
+
+/* Photograph plus a caption line, for figures that carry information. */
+figure.photo-fig { margin: 0; }
+figure.photo-fig figcaption {
+  margin-top: .7rem; font-size: .84rem; color: var(--ink-faint);
+  line-height: 1.5; max-width: 46ch;
+}
+
+/* Full-bleed photographic band with a statement over it. */
+.photo-band {
+  position: relative;
+  padding: clamp(8rem, 22vw, 15rem) 0;
+  background-color: #14201b;
+  background-position: center 42%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.photo-band::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(10, 34, 24, .34) 0%, rgba(10, 34, 24, .72) 100%);
+}
+.photo-band .wrap { position: relative; z-index: 2; }
+.photo-band .eyebrow { color: #cfe3d6; }
+.photo-band h2 { color: #fff; max-width: 20ch; }
+.photo-band p { color: #dbe7df; max-width: 56ch; font-size: clamp(1.15rem, 2.2vw, 1.4rem); margin-bottom: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  @media (min-width: 900px) { .photo-band { background-attachment: fixed; } }
+}
+
+/* A row of photographs telling a sequence. */
+.photo-row { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); }
+.photo-row img { aspect-ratio: 4 / 3; object-fit: cover; min-height: 20rem; }
+
+/* Photograph bled to the edge of a two-column split. */
+.split-photo img { border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
+
+
+/* ---------- Type refinements for Cormorant Garamond ----------
+   The face has a small x-height and a light regular, so body copy needs a
+   larger size than a grotesque would, and inline bold needs pulling back:
+   at 700 in a serif it reads as a block of black rather than as emphasis. */
+strong, b { font-weight: 500; }
+.lede { font-weight: 400; }
+p { max-width: 74ch; }
+.hero p, .band p, .photo-band p, .lede { max-width: 62ch; }
+
+/* Let the section photographs run full width of their column and carry more presence. */
+figure.illus .photo, .split .photo { width: 100%; }
+.photo-wide { min-height: 22rem; }
+
+/* Pull the photo-row out past its text column on wide screens so the
+   photographs read as a band rather than as three inline thumbnails. */
+@media (min-width: 1100px) {
+  .photo-row { margin-left: calc(var(--pad) * -1); margin-right: calc(var(--pad) * -1); }
+}
+
+/* A grid child that breaks out across every column of a .split - used where a
+   photograph would otherwise be squeezed into the narrow column beside a table. */
+.split > .span-all { grid-column: 1 / -1; }
+
+/* Full-width figure: a letterbox crop so a wide photograph reads as a band
+   rather than towering over the section it belongs to. */
+.photo-panorama {
+  aspect-ratio: 21 / 9; object-fit: cover; object-position: center 55%;
+  width: 100%; min-height: 20rem;
+}
+@media (max-width: 700px) { .photo-panorama { aspect-ratio: 3 / 2; min-height: 0; } }

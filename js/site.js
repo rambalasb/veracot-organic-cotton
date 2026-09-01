@@ -1,4 +1,4 @@
-/* GENCOTT — nav, theme, reveal-on-scroll. No dependencies. */
+/* GENCOTT - nav, reveal-on-scroll. No dependencies. */
 (function () {
   "use strict";
 
@@ -17,34 +17,6 @@
       }
     });
   }
-
-  /* ---- Theme toggle (persisted) ---- */
-  var STORE = "gencott-theme";
-  var root = document.documentElement;
-
-  /* Light cotton is the default regardless of the OS setting — dark is opt-in. */
-  function currentDark() {
-    return root.getAttribute("data-theme") === "dark";
-  }
-  function apply(theme) {
-    root.setAttribute("data-theme", theme);
-    document.querySelectorAll(".theme-toggle").forEach(function (b) {
-      b.setAttribute("aria-label", theme === "dark" ? "Switch to light theme" : "Switch to dark theme");
-    });
-  }
-
-  try {
-    var saved = localStorage.getItem(STORE);
-    if (saved === "dark" || saved === "light") apply(saved);
-  } catch (e) { /* storage blocked — fall back to system */ }
-
-  document.querySelectorAll(".theme-toggle").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      var next = currentDark() ? "light" : "dark";
-      apply(next);
-      try { localStorage.setItem(STORE, next); } catch (e) {}
-    });
-  });
 
   /* ---- Reveal on scroll ---- */
   var targets = document.querySelectorAll(".reveal");
@@ -70,7 +42,7 @@
       var out = form.querySelector(".form-result");
       if (out) {
         out.textContent =
-          "Thanks — this demonstration site has no backend, so nothing was sent. " +
+          "Thanks - this demonstration site has no backend, so nothing was sent. " +
           "Wire this form to your own endpoint or mailto address before going live.";
         out.hidden = false;
       }
