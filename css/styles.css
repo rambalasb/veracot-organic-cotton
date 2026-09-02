@@ -146,6 +146,9 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 .btn-outline-light { border-color: var(--cotton-line); color: var(--on-cotton); background: transparent; }
 .btn-outline-light:hover { border-color: var(--green); color: var(--green); }
 
+/* A call to action sitting inside an ordinary content section. */
+.cta-row { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; margin-top: 2.5rem; }
+
 .nav-toggle { display: none; }
 
 @media (max-width: 1040px) {
@@ -407,6 +410,23 @@ figure.photo-fig figcaption {
   margin-top: .7rem; font-size: .84rem; color: var(--ink-faint);
   line-height: 1.5; max-width: 46ch;
 }
+
+/* Numbered photographic process. Six figures, each cropped to the same
+   4:3 window so mixed portrait and landscape sources sit level in the grid. */
+.process { counter-reset: shot; }
+.process figure.photo-fig { position: relative; }
+.process figure.photo-fig::before {
+  counter-increment: shot;
+  content: counter(shot, decimal-leading-zero);
+  position: absolute; top: .75rem; left: .75rem; z-index: 1;
+  width: 36px; height: 36px; display: grid; place-items: center;
+  font-family: var(--font-serif); font-size: 1rem; line-height: 1;
+  color: var(--green); background: var(--cotton-puff);
+  border: 1px solid var(--cotton-line); border-radius: 10px;
+  backdrop-filter: blur(2px);
+}
+.process figure.photo-fig figcaption { max-width: none; }
+.process h3 { margin: .8rem 0 .3rem; font-size: 1.05rem; }
 
 /* Full-bleed photographic band with a statement over it. */
 .photo-band {
